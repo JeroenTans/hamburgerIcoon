@@ -1,3 +1,5 @@
+
+
 :root {
     --menu-bar-width: 60px;
     --menu-bar-height: 10px;
@@ -8,7 +10,7 @@
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
+
 }
 
 #menu::before,
@@ -30,4 +32,34 @@
     left: 0;
     top: 20px;
 }
+
+.hamburger-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+}
+
+.hamburger-container:hover #menu {
+    background-color: transparent;
+    transition: all 2s ease 0s
+}
+
+.hamburger-container:hover #menu::before {
+    margin-top: 20px;
+    transform: rotate(315deg);
+    transition: all 2s ease 0s
+}
+
+.hamburger-container:hover #menu::after {
+    margin-top: -20px;
+    transform: rotate(-315deg);
+    transition: all 2s ease 0s
+}
+
+
+
 
